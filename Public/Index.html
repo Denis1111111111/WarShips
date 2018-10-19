@@ -1,0 +1,153 @@
+<!Doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sea battle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Public/Style.css" />
+    <script src="Public/ClientController.js"></script>
+</head>
+
+<body style="background-image: url(Public/Sea.jpg)">
+
+    <div class="main-container">
+
+        <div class="text">
+
+            <h3 id="text" style="-webkit-text-fill-color: rgb(8, 4, 56)">Place 5 ships on the field</h3>
+
+        </div>
+
+        <div class="body-container">
+
+            <table id="MyTable" class="table" onclick="clickOnTable(event)">
+                <th class="table__th_Border-none disableObject"> </th>
+                <th class="table__th_Border-none disableObject">a</th>
+                <th class="table__th_Border-none disableObject">b</th>
+                <th class="table__th_Border-none disableObject">c</th>
+                <th class="table__th_Border-none disableObject">d</th>
+                <th class="table__th_Border-none disableObject">e</th>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">1</td>
+                    <td class="table__td_Border-visible" id="Ua1"> </td>
+                    <td class="table__td_Border-visible" id="Ub1"> </td>
+                    <td class="table__td_Border-visible" id="Uc1"> </td>
+                    <td class="table__td_Border-visible" id="Ud1"> </td>
+                    <td class="table__td_Border-visible" id="Ue1"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">2</td>
+                    <td class="table__td_Border-visible" id="Ua2"> </td>
+                    <td class="table__td_Border-visible" id="Ub2"> </td>
+                    <td class="table__td_Border-visible" id="Uc2"> </td>
+                    <td class="table__td_Border-visible" id="Ud2"> </td>
+                    <td class="table__td_Border-visible" id="Ue2"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">3</td>
+                    <td class="table__td_Border-visible" id="Ua3"> </td>
+                    <td class="table__td_Border-visible" id="Ub3"> </td>
+                    <td class="table__td_Border-visible" id="Uc3"> </td>
+                    <td class="table__td_Border-visible" id="Ud3"> </td>
+                    <td class="table__td_Border-visible" id="Ue3"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">4</td>
+                    <td class="table__td_Border-visible" id="Ua4"> </td>
+                    <td class="table__td_Border-visible" id="Ub4"> </td>
+                    <td class="table__td_Border-visible" id="Uc4"> </td>
+                    <td class="table__td_Border-visible" id="Ud4"> </td>
+                    <td class="table__td_Border-visible" id="Ue4"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">5</td>
+                    <td class="table__td_Border-visible" id="Ua5"> </td>
+                    <td class="table__td_Border-visible" id="Ub5"> </td>
+                    <td class="table__td_Border-visible" id="Uc5"> </td>
+                    <td class="table__td_Border-visible" id="Ud5"> </td>
+                    <td class="table__td_Border-visible" id="Ue5"> </td>
+                </tr>
+
+
+            </table>
+
+            <div style="display: flex; justify-content: space-around; flex-direction: column">
+
+                <button id="btnPlay" onclick="play()" class="btn">PLAY</button>
+                <button id="btnPlayAgain" onclick="playAgain()" class="displayNone btn">PLAY AGAIN</button>
+
+            </div>
+
+
+
+            <table id="tableEnemy" class="table disableObject" onclick="shoot(event)">
+
+                <th class="table__th_Border-none disableObject"> </th>
+                <th class="table__th_Border-none disableObject">a</th>
+                <th class="table__th_Border-none disableObject">b</th>
+                <th class="table__th_Border-none disableObject">c</th>
+                <th class="table__th_Border-none disableObject">d</th>
+                <th class="table__th_Border-none disableObject">e</th>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">1</td>
+                    <td class="table__td_Border-visible" id="Ea1"> </td>
+                    <td class="table__td_Border-visible" id="Eb1"> </td>
+                    <td class="table__td_Border-visible" id="Ec1"> </td>
+                    <td class="table__td_Border-visible" id="Ed1"> </td>
+                    <td class="table__td_Border-visible" id="Ee1"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">2</td>
+                    <td class="table__td_Border-visible" id="Ea2"> </td>
+                    <td class="table__td_Border-visible" id="Eb2"> </td>
+                    <td class="table__td_Border-visible" id="Ec2"> </td>
+                    <td class="table__td_Border-visible" id="Ed2"> </td>
+                    <td class="table__td_Border-visible" id="Ee2"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">3</td>
+                    <td class="table__td_Border-visible" id="Ea3"> </td>
+                    <td class="table__td_Border-visible" id="Eb3"> </td>
+                    <td class="table__td_Border-visible" id="Ec3"> </td>
+                    <td class="table__td_Border-visible" id="Ed3"> </td>
+                    <td class="table__td_Border-visible" id="Ee3"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">4</td>
+                    <td class="table__td_Border-visible" id="Ea4"> </td>
+                    <td class="table__td_Border-visible" id="Eb4"> </td>
+                    <td class="table__td_Border-visible" id="Ec4"> </td>
+                    <td class="table__td_Border-visible" id="Ed4"> </td>
+                    <td class="table__td_Border-visible" id="Ee4"> </td>
+                </tr>
+
+                <tr>
+                    <td class="table__td_Border-none disableObject">5</td>
+                    <td class="table__td_Border-visible" id="Ea5"> </td>
+                    <td class="table__td_Border-visible" id="Eb5"> </td>
+                    <td class="table__td_Border-visible" id="Ec5"> </td>
+                    <td class="table__td_Border-visible" id="Ed5"> </td>
+                    <td class="table__td_Border-visible" id="Ee5"> </td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
